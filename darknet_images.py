@@ -113,7 +113,24 @@ def image_detection(image_path, network, class_names, class_colors, thresh):
     detections = darknet.detect_image(network, class_names, darknet_image, thresh=thresh)
     image = darknet.draw_boxes(detections, image_resized, class_colors)
     return cv2.cvtColor(image, cv2.COLOR_BGR2RGB), detections
-
+    if class_names == "fresh":
+        fresh = 0
+    if class_names == "ripe":
+        ripe = 0
+    if class_names == "raw":
+        raw = 0
+    if class_names == "flowering":
+        flowering = 0
+    if class_names == "alternaria":
+        alternaria = 0
+    if class_names == "cedar":
+        cedar = 0
+    if class_names == "fire-blight":
+        fire_blight = 0
+    if class_names == "leaf-roller":
+        leaf_roller = 0
+    if class_names == "fungal":
+        fungal = 0
 
 def batch_detection(network, images, class_names, class_colors,
                     thresh=0.25, hier_thresh=.5, nms=.45, batch_size=4):
