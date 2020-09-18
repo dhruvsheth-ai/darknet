@@ -85,6 +85,41 @@ def inference(darknet_image_queue, detections_queue, fps_queue):
         print("FPS: {}".format(fps))
         darknet.print_detections(detections, args.ext_output)
     cap.release()
+    if class_names == "fresh":
+
+        fresh = 0
+
+    if class_names == "ripe":
+
+        ripe = 0
+
+    if class_names == "raw":
+
+        raw = 0
+
+    if class_names == "flowering":
+
+        flowering = 0
+
+    if class_names == "alternaria":
+
+        alternaria = 0
+
+    if class_names == "cedar":
+
+        cedar = 0
+
+    if class_names == "fire-blight":
+
+        fire_blight = 0
+
+    if class_names == "leaf-roller":
+
+        leaf_roller = 0
+
+    if class_names == "fungal":
+
+        fungal = 0
 
 
 def drawing(frame_queue, detections_queue, fps_queue):
